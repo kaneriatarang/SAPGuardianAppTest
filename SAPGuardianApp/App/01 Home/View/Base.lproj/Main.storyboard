@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="40q-L3-kkP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="aC2-po-ajJ">
+            <objects>
+                <viewController id="40q-L3-kkP" customClass="HomeViewController" customModule="SAPGuardianApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YPu-kc-UCo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="200" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZYC-eY-wda">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1iT-6p-BDC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1iT-6p-BDC" firstAttribute="trailing" secondItem="ZYC-eY-wda" secondAttribute="trailing" id="Jrj-Th-33p"/>
+                            <constraint firstItem="ZYC-eY-wda" firstAttribute="leading" secondItem="1iT-6p-BDC" secondAttribute="leading" id="Nin-ka-V0S"/>
+                            <constraint firstAttribute="bottom" secondItem="ZYC-eY-wda" secondAttribute="bottom" id="vda-r6-BKL"/>
+                            <constraint firstItem="ZYC-eY-wda" firstAttribute="top" secondItem="YPu-kc-UCo" secondAttribute="top" id="zbT-aj-CUf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ZYC-eY-wda" id="4DU-kW-1Am"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="512-Ql-2Lo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39" y="48"/>
+        </scene>
+        <!--News Details View Controller-->
+        <scene sceneID="jqm-m8-lf6">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailsViewController" id="Rl0-k1-HNs" customClass="NewsDetailsViewController" customModule="SAPGuardianApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W2d-YO-eab">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCk-ll-jYF">
+                                <rect key="frame" x="5" y="54" width="404" height="26.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="TWK-3R-AM9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="rVD-IM-9mi">
+                                <rect key="frame" x="0.0" y="90.5" width="414" height="207"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RIy-ll-ras" customClass="LinkTextView" customModule="SAPGuardianApp" customModuleProvider="target">
+                                <rect key="frame" x="5" y="307.5" width="404" height="513.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L6-PB-UdX">
+                                <rect key="frame" x="103.5" y="831" width="207" height="36"/>
+                                <color key="backgroundColor" red="0.91921168565750122" green="0.38568963574862886" blue="0.19886677315182483" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="20"/>
+                                <state key="normal" title="Read on website">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LNd-YE-uWT"/>
+                        <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RIy-ll-ras" firstAttribute="leading" secondItem="LNd-YE-uWT" secondAttribute="leading" constant="5" id="5Rl-wo-z0J"/>
+                            <constraint firstItem="3L6-PB-UdX" firstAttribute="centerX" secondItem="LNd-YE-uWT" secondAttribute="centerX" id="ACO-J7-lL2"/>
+                            <constraint firstItem="MCk-ll-jYF" firstAttribute="top" secondItem="LNd-YE-uWT" secondAttribute="top" constant="10" id="Awj-l4-Fbn"/>
+                            <constraint firstItem="3L6-PB-UdX" firstAttribute="width" secondItem="W2d-YO-eab" secondAttribute="width" multiplier="0.5" id="DGU-Pz-Q7t"/>
+                            <constraint firstItem="3L6-PB-UdX" firstAttribute="bottom" secondItem="LNd-YE-uWT" secondAttribute="bottom" constant="5" id="EVt-6d-gm0"/>
+                            <constraint firstItem="3L6-PB-UdX" firstAttribute="top" secondItem="RIy-ll-ras" secondAttribute="bottom" constant="10" id="FIu-8R-Wii"/>
+                            <constraint firstAttribute="trailing" secondItem="rVD-IM-9mi" secondAttribute="trailing" id="LZm-NL-mDf"/>
+                            <constraint firstAttribute="trailing" secondItem="MCk-ll-jYF" secondAttribute="trailing" constant="5" id="OgY-HR-FrK"/>
+                            <constraint firstItem="rVD-IM-9mi" firstAttribute="width" secondItem="rVD-IM-9mi" secondAttribute="height" multiplier="3:1.5" id="YzL-m7-Z4z"/>
+                            <constraint firstItem="MCk-ll-jYF" firstAttribute="leading" secondItem="W2d-YO-eab" secondAttribute="leading" constant="5" id="dhf-wq-wax"/>
+                            <constraint firstItem="rVD-IM-9mi" firstAttribute="leading" secondItem="W2d-YO-eab" secondAttribute="leading" id="fAp-Yn-fZN"/>
+                            <constraint firstItem="RIy-ll-ras" firstAttribute="top" secondItem="rVD-IM-9mi" secondAttribute="bottom" constant="10" id="iA9-Y2-IYD"/>
+                            <constraint firstItem="rVD-IM-9mi" firstAttribute="top" secondItem="MCk-ll-jYF" secondAttribute="bottom" constant="10" id="ilf-u4-72g"/>
+                            <constraint firstItem="LNd-YE-uWT" firstAttribute="trailing" secondItem="RIy-ll-ras" secondAttribute="trailing" constant="5" id="mfE-Hx-RHQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="readOnWebButton" destination="3L6-PB-UdX" id="CHT-rT-aAf"/>
+                        <outlet property="textView" destination="RIy-ll-ras" id="onu-0v-IS6"/>
+                        <outlet property="thumbnailImageView" destination="rVD-IM-9mi" id="7ZJ-1l-779"/>
+                        <outlet property="titleLabel" destination="MCk-ll-jYF" id="wsc-sa-tnA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uc9-mb-UnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826" y="48"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeholderImage" width="240" height="240"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
